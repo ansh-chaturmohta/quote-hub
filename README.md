@@ -1,4 +1,6 @@
-# quote-hub
+# Quote-hub
 
-Write/Find Quotes
+
+Write/Find Quotes.
+
 You can find the website [here](quote-hub.herokuapp.com)
