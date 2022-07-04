@@ -1,0 +1,49 @@
+<div class="row" style="text-shadow:2px 1px black">
+    <div class="col s12 m4" style="text-shadow:2px 1px black">
+        <div class="card center-align" style="text-shadow:2px 1px black;background:none">
+            <div class="card-content" style="text-shadow:2px 1px black">
+                <img src={{userImage}} class="circle responsive-img">
+                <span class="card-title">{{nameFirst}} {{nameLast}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4"></div>
+    <div class="col s12 m4"></div>   
+</div>
+<div>
+    <h1 style="text-shadow:7px 2px black">Your Entries</h1>
+</div>
+{{#if stories}}
+    <table class="stripped">
+        <thead>
+            <tr>
+                <th>Quote</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each stories}}
+                <tr>
+                    <td><h6><a href="/quotes/{{_id}}">{{{truncate body 30}}}</a></h6></td>
+                    <td><h6><span class="dash-status">{{title}}</span></h6></td>
+                    <td><h6>{{formatDate createdAt 'Do MMMM YYYY, h:mm:ss a'}}</h6></td>
+                    <td>
+                        <a href="/quotes/edit/{{_id}}" class="btn btn-float">
+                            <i class="fas fa-edit fa-small"></i>
+                        </a>
+                        <form action="/quotes/{{_id}}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn red">
+                                <i class="fas fa-trash"></i>
+                            </button>                        
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>You do not have any entries of your own</p>
+{{/if}}

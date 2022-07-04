@@ -1,0 +1,1 @@
+config.uiColor = "#00cccc"

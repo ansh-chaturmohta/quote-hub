@@ -1,0 +1,37 @@
+p{
+    margin :10px 0 !important;
+}
+
+.login-container{
+    width:400px;
+    margin-top: 150px;
+    text-align: center;
+    padding:30px;
+}
+
+.card-container{
+    padding:30px;
+}
+
+.fa-small{
+    font-size:16px !important
+}
+
+.btn-float{
+    float:left;
+    margin-right: 10px;
+}
+
+.img-small{
+    width:180px;
+    /* background */
+}
+
+.login-pos{
+    text-align:center;
+}
+
+.styleit{
+    width:50%;
+    padding-left:25%
+}
